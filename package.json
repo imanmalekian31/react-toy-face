@@ -1,0 +1,25 @@
+{
+  "name": "react-toy-face",
+  "description": "Awesome avatars",
+  "version": "1.0.0",
+  "private": false,
+  "author": {
+    "name": "Iman Malekian",
+    "email": "imanmalekian31@gmail.com"
+  },
+  "repository": "https://github.com/imanmalekian31/react-toy-face",
+  "bugs": "https://github.com/imanmalekian31/react-toy-face/issues",
+  "keywords": [
+    "react",
+    "toy",
+    "face"
+  ],
+  "license": "MIT",
+  "main": "src/index.js",
+  "files": [
+    "src/"
+  ],
+  "peerDependencies": {
+    "react": "^18.2.0"
+  }
+}
