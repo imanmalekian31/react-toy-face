@@ -13,7 +13,7 @@ const GROUPS = [
   },
 ];
 
-const ReactToyFace = ({ size, toyNumber, group, rounded }) => {
+const ReactToyFace = ({ size, toyNumber, group = 1, rounded }) => {
   const currentGroup = useMemo(() => GROUPS[group - 1], [group]);
 
   const posX = useMemo(
@@ -27,20 +27,21 @@ const ReactToyFace = ({ size, toyNumber, group, rounded }) => {
   );
 
   return (
-    <span
-      style={{
-        display: "inline-block",
-        width: `${size}px`,
-        height: `${size}px`,
-        backgroundImage: currentGroup.img,
-        backgroundRepeat: "no-repeat",
-        backgroundSize:
-          size * currentGroup.cols + "px " + size * currentGroup.rows + "px",
-        borderRadius: rounded + "px",
-        backgroundPositionX: `-${posX * size}px`,
-        backgroundPositionY: `-${posY * size}px`,
-      }}
-    />
+    <div>iman</div>
+    // <span
+    //   style={{
+    //     display: "inline-block",
+    //     width: `${size}px`,
+    //     height: `${size}px`,
+    //     backgroundImage: currentGroup.img,
+    //     backgroundRepeat: "no-repeat",
+    //     backgroundSize:
+    //       size * currentGroup.cols + "px " + size * currentGroup.rows + "px",
+    //     borderRadius: rounded + "px",
+    //     backgroundPositionX: `-${posX * size}px`,
+    //     backgroundPositionY: `-${posY * size}px`,
+    //   }}
+    // />
   );
 };
 

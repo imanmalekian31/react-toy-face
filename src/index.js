@@ -1,4 +1,4 @@
-import ReactToyFace from "../components/ToyFace";
+import ReactToyFace from "./components/ToyFace.js";
 
 export { ReactToyFace };
 
