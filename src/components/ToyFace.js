@@ -1,4 +1,4 @@
-import React, { useMemo } from "react";
+import React from "react";
 
 const GROUPS = [
   {
@@ -14,34 +14,27 @@ const GROUPS = [
 ];
 
 const ReactToyFace = ({ size, toyNumber, group = 1, rounded }) => {
-  const currentGroup = useMemo(() => GROUPS[group - 1], [group]);
+  const currentGroup = () => GROUPS[group - 1];
 
-  const posX = useMemo(
-    () => (toyNumber - 1) % currentGroup.cols,
-    [toyNumber, currentGroup]
-  );
+  const posX = () => (toyNumber - 1) % currentGroup().cols;
 
-  const posY = useMemo(
-    () => Math.floor((toyNumber - 1) / currentGroup.cols),
-    [toyNumber, currentGroup]
-  );
+  const posY = () => Math.floor((toyNumber - 1) / currentGroup().cols);
 
   return (
-    <div>iman</div>
-    // <span
-    //   style={{
-    //     display: "inline-block",
-    //     width: `${size}px`,
-    //     height: `${size}px`,
-    //     backgroundImage: currentGroup.img,
-    //     backgroundRepeat: "no-repeat",
-    //     backgroundSize:
-    //       size * currentGroup.cols + "px " + size * currentGroup.rows + "px",
-    //     borderRadius: rounded + "px",
-    //     backgroundPositionX: `-${posX * size}px`,
-    //     backgroundPositionY: `-${posY * size}px`,
-    //   }}
-    // />
+    <span
+      style={{
+        display: "inline-block",
+        width: `${size}px`,
+        height: `${size}px`,
+        backgroundImage: currentGroup().img,
+        backgroundRepeat: "no-repeat",
+        backgroundSize:
+          size * currentGroup().cols + "px " + size * currentGroup().rows + "px",
+        borderRadius: rounded + "px",
+        backgroundPositionX: `-${posX() * size}px`,
+        backgroundPositionY: `-${posY() * size}px`,
+      }}
+    />
   );
 };
 

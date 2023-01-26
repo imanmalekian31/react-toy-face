@@ -26,7 +26,7 @@ import ReactToyFace from "react-toy-face";
 function App() {
   return (
     <div>
-      <ReactToyFace size={140} rounded={28} toy-number={3} />
+      <ReactToyFace size={140} rounded={28} toyNumber={3} />
     </div>
   );
 }
