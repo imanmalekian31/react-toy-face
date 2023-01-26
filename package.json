@@ -1,7 +1,7 @@
 {
   "name": "react-toy-face",
   "description": "Awesome avatars for React",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "private": false,
   "author": {
     "name": "Iman Malekian",
@@ -20,7 +20,7 @@
     "build": "babel src -d dist --copy-files"
   },
   "files": [
-    "src/"
+    "dist/"
   ],
   "peerDependencies": {
     "react": "^18.2.0"
