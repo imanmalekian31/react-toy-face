@@ -1,7 +1,7 @@
 {
   "name": "react-toy-face",
-  "description": "Awesome avatars",
-  "version": "1.0.0",
+  "description": "Awesome avatars for React",
+  "version": "1.0.1",
   "private": false,
   "author": {
     "name": "Iman Malekian",
